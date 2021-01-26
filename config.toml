@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "敖小剑的学习笔记"
+title = "Hugo学习笔记"
 
 enableRobotsTXT = true
 uglyurls = true
@@ -54,8 +54,8 @@ id = "G-BCH7JZFQS9"
 
 [languages]
 [languages.zh]
-title = "敖小剑的学习笔记"
-description = "敖小剑的学习笔记，记录学习的过程和相关资料"
+title = "Hugo学习笔记"
+description = "Hugo学习笔记"
 languageName ="中文"
 contentDir = "content"
 time_format_default = "2006-01-02"
@@ -101,18 +101,18 @@ version = "0.0"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
-url_latest_version = "https://example.com"
+url_latest_version = "https://github.com/skyao/learning-hugo"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/skyao/docsy-example"
+github_repo = "https://github.com/skyao/learning-hugo"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/skyao/docsy"
+github_project_repo = "https://github.com/skyao/learning-hugo"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-gcs_engine_id = "011737558837375720776:fsdu1nryfng"
+gcs_engine_id = "8f763efbce07435e9"
 
 # Enable Algolia DocSearch
 algolia_docsearch = false
