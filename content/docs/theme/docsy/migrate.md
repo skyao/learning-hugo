@@ -67,8 +67,10 @@ git push
 ```bash
 git checkout --orphan docsy
 git rm -rf .
-ls
-rm -rf .
+ls -la
+rm -rf *
+ls -la
+# 如果还有其他内容再 rm -rf 删除
 ```
 
 这样就得到一个什么内容都没有的空白的分支。
@@ -83,7 +85,7 @@ git fetch --all
 ### merge learning-clean分支
 
 ```bash
-git merge upstream/learning-clean
+git merge docsy/learning-clean
 ```
 
 此时目录下就有从 `docsy-example` 仓库 `learning-clean` 分支上的干干净净的内容。
