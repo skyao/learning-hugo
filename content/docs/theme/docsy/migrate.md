@@ -78,7 +78,7 @@ ls -la
 ### 添加docsy-example远程仓库
 
 ```bash
-git add remote docsy git://github.com/skyao/docsy-example.git
+git remote add docsy git://github.com/skyao/docsy-example.git
 git fetch --all
 ```
 
