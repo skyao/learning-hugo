@@ -29,7 +29,7 @@ tar xvf node-v14.15.4-linux-x64.tar.xz
 sudo mv node-v14.15.4-linux-x64 /usr/share/nodejs
 ```
 
-打开 /etc/profile, 添加下来内容,将 `/usr/share/nodejs/bin` 加入PATH 路径:
+打开 `~/.bashrc`, 添加下来内容,将 `/usr/share/nodejs/bin` 加入PATH 路径:
 
 ```bash
 export PATH=/usr/share/nodejs/bin:$PATH
@@ -38,7 +38,7 @@ export PATH=/usr/share/nodejs/bin:$PATH
 完成之后执行version命令检验是否安装成功：
 
 ```bash
-source /etc/profile
+source ~/.bashrc
 npm --version
 ```
 
@@ -90,7 +90,7 @@ TODO：暂未尝试，待更新。
 验证安装：
 
 ```bash
-$ % hugo2 version
+$ % hugo version
 Hugo Static Site Generator v0.80.0-792EF0F4/extended darwin/amd64 BuildDate: 2020-12-31T13:44:15Z
 ```
 
@@ -107,10 +107,10 @@ Hugo Static Site Generator v0.80.0-792EF0F4/extended darwin/amd64 BuildDate: 202
 - linux mint下默认bash：
 
   ```bash
-  sudo vi /etc/profile
+  sudo vi ~/.bashrc
   # hugo
   alias h='hugo -D -F server --disableFastRender --bind "0.0.0.0"'
-  source /etc/profile
+  source ~/.bashrc
   ```
 
 hugo命令行参数说明：
