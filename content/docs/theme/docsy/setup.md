@@ -67,7 +67,7 @@ hugo server
 
 因此我才用了为 docsy 主题文件创建软链接的方式，放弃 `git submodule` 机制，具体做法是：
 
-1. 将 docsy 主题文件clone到本地：
+1. 将 docsy 主题文件clone到本地的 docsy 仓库：
 
    ```bash
    git clone git@github.com:google/docsy.git
@@ -88,14 +88,14 @@ hugo server
    Error: Error building site: TOCSS: failed to transform "scss/main.scss" (text/x-scss): SCSS processing failed: file "stdin", line 6, col 1: File to import not found or unreadable: ../vendor/bootstrap/scss/bootstrap. 
    ```
 
-3. 删除原有的 theme 目录和 .gitmodule 文件
+3. 删除 docsy-example 仓库下原有的 theme 目录和 .gitmodule 文件
 
    ```bash
    rm -rf themes
    rm .gitmodule
    ```
 
-4. 创建软链接
+4. 在 docsy-example 仓库下创建到 docsy 仓库的软链接
 
    ```bash
    mkdir themes
