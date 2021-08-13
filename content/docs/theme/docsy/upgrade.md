@@ -14,22 +14,19 @@ description: >
 
 ### 升级 Docsy 最新版本到 master分支
 
-两个仓库都需要 fork，master branch保持和上游master branch的代码一致，master分支上不做任何改动：
+docsy仓库需要 fork，master branch保持和上游master branch的代码一致，master分支上不做任何改动：
 
-- docsy
-- docsy-example
-
-升级最新版本时，通过 git remote 机制从上流拉取最新的代码到这两个仓库的master分支
+升级最新版本时，通过 git remote 机制从上流拉取最新的代码到这个仓库的master分支
 
 ### 创建 learning-xxxx 分支
 
-通过下列命令在 docsy 和 docsy-example 仓库中为每次更新建立单独的 learning 分支，以月份为后缀：
+通过下列命令在 docsy 仓库中为每次更新建立单独的 learning 分支，以月份为后缀：
 
 ```bash
 git checkout -b learning-202108
 ```
 
-### 运行 docsy-example 
+### 运行 docsy-example
 
 
 1. 进入 docsy 仓库拉取 docsy 依赖的 submodule ：
@@ -90,11 +87,11 @@ wget -x http://localhost:1313/webfonts/fa-solid-900.woff2
 
 wget -x https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js
 wget -x https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.css
-https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.js
-https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/mhchem.min.js
+wget -x https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.js
+wget -x https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/mhchem.min.js
 
-https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/auto-render.min.js
-https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v27.0.1/dist/font-face.css
+wget -x https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/auto-render.min.js
+wget -x https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v27.0.1/dist/font-face.css
 
 ```
 
@@ -102,13 +99,15 @@ https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v27.0.1/dist/font-face.css
 
 先不优化，先搞定中文页面，再看是否需要优化，有些内容可能和多语言有关系。
 
-css文件比较麻烦
+css文件比较麻烦，主要是这些css文件不是以静态文件的方式发布，而是服务器端下发，如果简单改会出现css不对应的问题。之前遇到的代码高亮无法显示就是这个造成的。
 
 ```bash
 find . -type f -exec grep -Hn "css?family=" {} \;                             
 ./assets/scss/_variables.scss:67:$web-font-path: "https://fonts.googleapis.com/css?family=#{$google_font_family}&display=swap";
 ./assets/vendor/bootstrap/site/content/docs/4.6/examples/blog/index.html:5:  - "https://fonts.googleapis.com/css?family=Playfair+Display:700,900"
 ```
+
+这两个参数是写死的，理论上可以强行静态化，就是涉及到的文件数量非常多。
 
 ```
 body:lang(he) {
@@ -122,5 +121,11 @@ body:lang(ar) {
 }
 ```
 
+> 暂时先不懂，以后再看是否有必要。
 
+### 更新相关的仓库
+
+之后使用 docsy 的 learning-xxx 分支即可，docsy-example 仓库检查了一下，基本没有实质性的内容改动，可以忽略不计。
+
+由于我使用的是 soft link，所以其他笔记自动就更新到了最新的  learning-xxx 分支的 docsy 主题。
 

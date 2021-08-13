@@ -31,7 +31,7 @@ sudo letsencrypt certonly --webroot -w /var/www/skyao -d skyao.io
 
 在`/etc/nginx/sites-available`下增加一个`skyao.io.https`站点文件，内容如下：
 
-```bash
+```json
 server {
     listen 443 ssl;
     server_name skyao.io www.skyao.io;
@@ -47,7 +47,7 @@ server {
 
 然后将http请求都自动转为https，修改原来的`skyao.io`配置文件：
 
-```bash
+```json
 server {
     listen 80;
     server_name skyao.io www.skyao.io;

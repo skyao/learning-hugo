@@ -14,7 +14,7 @@ hugo new site /path/tp/your/site
 
 提示如下：
 
-```
+```bash
 $ hugo new site learning-cilium
 Congratulations! Your new Hugo site is created in /home/sky/work/code/learning/learning-cilium.
 
