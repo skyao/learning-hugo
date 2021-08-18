@@ -1,16 +1,14 @@
 ---
-title: "academic主题"
+title: "[归档]2019年修改记录"
 date: 2021-01-18
-weight: 320
+weight: 329
 description: >
   详细介绍hugo的academic主题，使用方式和订制化
 ---
 
 {{% pageinfo %}}
-academic特别适合搭建内容相对比较丰富的网站，我用academic主题搭建的个人技术博客网站: https://skyao.io
+以下内容是2019年更新的，后续因为版本变动太大，已经没有参考价值，放在这里归档。
 {{% /pageinfo %}}
-
-TODO：以下内容是2019年的更新的，计划2021年更新到最新的版本，再重新整理这里的内容。
 
 ## 主题介绍
 
