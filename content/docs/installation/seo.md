@@ -47,6 +47,12 @@ description : "介绍Hugo学习笔记的基本资料和访问方式。"
 
 进入"数据引入"下的"链接提交"，再点 "自动提交" 下的 "sitemap"，在这里可以提交hugo网站的sitemap文件。注意百度不容许以子目录的方式提交子站点，和google不一样，我们的学习笔记 `https://skyao.io/learning-hugo/` 就不能直接提交了，只能在提交sitemap文件时，提交多个sitemap文件。这样也能勉强让百度收录。
 
+### Bing搜索优化
+
+在 [Bing Webmaster Tools](https://www.bing.com/webmasters) 处用登录，然后选择导入站点。Bing webmaster tools支持直接从 google 导入数据，很方便。
+
+操作界面和google很类似。
+
 ## 参考资料
 
 有参考以下资料，特此鸣谢：
