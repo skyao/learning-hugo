@@ -12,7 +12,7 @@ description: >
 
 https://analytics.google.com/
 
-创建账号和媒体，拿到 Analytics ID ，如 `G-BCH7JZFQS9`
+创建账号和媒体，拿到 Analytics ID ，如 `G-4BVWTNS4MB`
 
 ### 设置Google Analytics支持
 
@@ -24,8 +24,7 @@ https://www.docsy.dev/docs/adding-content/feedback/
 
 ```toml
  [services.googleAnalytics]
- #id = "UA-00000000-0"
- id = "G-BCH7JZFQS9"
+ id = "G-4BVWTNS4MB"
 ```
 
 ### 构建时的特殊设置
