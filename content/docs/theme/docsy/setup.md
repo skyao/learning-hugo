@@ -27,7 +27,7 @@ git clone git@github.com:google/docsy-example.git
 进入docsy目录下拉取 docsy 依赖的 submodule ：
 
 ```bash
-cd docsy-example
+cd docsy
 git submodule update --init --recursive
 
 子模组 'themes/docsy'（https://github.com/google/docsy）已对路径 'themes/docsy' 注册
@@ -49,8 +49,8 @@ Connection to github.com port 22 [tcp/ssh] succeeded!
 然后安装SCSS：
 
 ```bash
-sudo npm install -D --save autoprefixer
-sudo npm install -D --save postcss-cli
+npm install -D --save autoprefixer
+npm install -D --save postcss-cli
 ```
 
 最后执行：
@@ -104,4 +104,39 @@ hugo server
    ```
 
 这样就可以让几十份学习笔记同时依赖一份 docsy 模版文件，当 docsy模版文件内容发生变化时，所有的学习笔记都可以借助于软链接而同时得到更新。
+
+### 重来备忘录
+
+每次重新安装系统之后都不得不从头来一次，为了方便，记录一下全过程以备参考：
+
+```bash
+# 准备目录
+mkdir -p ~/work/code/learning
+cd ~/work/code/learning
+
+# docsy.git
+git clone git@github.com:skyao/docsy.git
+cd docsy
+git submodule update --init --recursive
+npm install -D --save autoprefixer
+npm install -D --save postcss-cli
+cd ..
+
+
+# build script
+git clone git@github.com:skyao/docsy-example.git
+cp -r docsy-example docsy-example-build
+cd docsy
+git checkout learning-202108
+cd ..
+
+cd docsy-example-build
+git checkout build
+cp clone.sh init.sh server.sh addremote.sh ../
+cd ..
+
+sh clone.sh hugo
+sh server.sh hugo
+```
+
 
