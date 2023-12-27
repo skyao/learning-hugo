@@ -24,12 +24,12 @@ https://nodejs.org/en/download/
 #### Linux下安装nodejs
 
 ```bash
-wget  https://nodejs.org/dist/v14.15.4/node-v14.15.4-linux-x64.tar.xz
-tar xvf node-v14.15.4-linux-x64.tar.xz
-sudo mv node-v14.15.4-linux-x64 /usr/share/nodejs
+wget https://nodejs.org/dist/v18.12.0/node-v18.12.0-linux-x64.tar.xz
+tar xvf node-v18.12.0-linux-x64.tar.xz
+sudo mv node-v18.12.0-linux-x64 /usr/share/nodejs
 ```
 
-打开 `~/.bashrc`, 添加下来内容,将 `/usr/share/nodejs/bin` 加入PATH 路径:
+打开 `~/.zshrc`, 添加下来内容,将 `/usr/share/nodejs/bin` 加入PATH 路径:
 
 ```bash
 export PATH=/usr/share/nodejs/bin:$PATH
@@ -38,7 +38,7 @@ export PATH=/usr/share/nodejs/bin:$PATH
 完成之后执行version命令检验是否安装成功：
 
 ```bash
-source ~/.bashrc
+source ~/.zshrc
 npm --version
 ```
 
@@ -56,12 +56,12 @@ npm --version
 
 找到linux的安装包，对于 ubuntu 可以直接用 deb 文件：
 
-- hugo_extended_0.80.0_Linux-64bit.deb
+- hugo_extended_0.105.0_linux-amd64.deb
 
 deb文件直接安装即可。
 
 ```bash
-sudo dpkg -i hugo_extended_0.80.0_Linux-64bit.deb
+sudo dpkg -i hugo_extended_0.105.0_linux-amd64.deb
 ```
 
 ### Mac安装
@@ -90,28 +90,17 @@ TODO：暂未尝试，待更新。
 验证安装：
 
 ```bash
-$ % hugo version
-Hugo Static Site Generator v0.80.0-792EF0F4/extended darwin/amd64 BuildDate: 2020-12-31T13:44:15Z
+$ hugo version
+hugo v0.105.0-0e3b42b4a9bdeb4d866210819fc6ddcf51582ffa+extended linux/amd64 BuildDate=2022-10-28T12:29:05Z VendorInfo=gohugoio
 ```
 
 为了方便使用，增加hugo server 命令的 alias 用来本地编辑时的实时预览： 
 
-- mac下默认zsh：
-
-  ```bash
-  vi ~/.zshrc
-  # hugo
-  alias h='hugo -D -F server --disableFastRender --bind "0.0.0.0"'
-  ```
-
-- linux mint下默认bash：
-
-  ```bash
-  sudo vi ~/.bashrc
-  # hugo
-  alias h='hugo -D -F server --disableFastRender --bind "0.0.0.0"'
-  source ~/.bashrc
-  ```
+```bash
+vi ~/.zshrc
+# hugo
+alias h='hugo -D -F server --disableFastRender --bind "0.0.0.0"'
+```
 
 hugo命令行参数说明：
 
@@ -128,12 +117,12 @@ https://www.docsy.dev/docs/getting-started/#install-postcss
 首先需要安装 nodejs，这样才能使用 npm 命令，然后在hugo项目下执行：
 
 ```bash
-% sudo npm install -D --save autoprefixer
+% npm install -D --save autoprefixer
 
 + autoprefixer@9.8.6
 added 115 packages from 112 contributors and audited 115 packages in 12.974s
 
-% sudo npm install -D --save postcss-cli
+% npm install -D --save postcss-cli
 
 + postcss-cli@7.1.2
 added 1 package from 1 contributor, removed 1 package, updated 18 packages and audited 115 packages in 39.211s
@@ -155,5 +144,4 @@ cd /var/lib/jenkins/workspace/skyao.io/
 # 需要明确指定baseUrl
 hugo --baseUrl="https://skyao.io/" -d "/var/www/skyao/"
 ```
-
 
