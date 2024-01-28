@@ -1,7 +1,7 @@
 ---
 title: "为学习笔记特别定制"
 linkTitle: "学习笔记定制"
-weight: 100
+weight: 30
 description: >
   修改模版内容，为学习比较特别定制
 ---

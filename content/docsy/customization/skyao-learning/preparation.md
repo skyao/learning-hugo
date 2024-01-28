@@ -27,13 +27,13 @@ docs：
 
 从官方仓库： https://github.com/google/docsy
 
-Fork 为自己的仓库：https://github.com/cloudruntime/docsy-learning
+Fork 为自己的仓库：https://github.com/skyao/docsy-learning
 
 docs-example：
 
 从官方仓库：https://github.com/google/docsy-example
 
-Fork 为自己的仓库：https://github.com/cloudruntime/docsy-example-learning
+Fork 为自己的仓库：https://github.com/skyao/docsy-example-learning
 
 ### 克隆代码
 

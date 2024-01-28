@@ -1,7 +1,7 @@
 ---
 title: "升级现有学习笔记"
 linkTitle: "升级"
-weight: 195
+weight: 50
 description: >
   记录升级现有学习笔记的过程，备用
 ---

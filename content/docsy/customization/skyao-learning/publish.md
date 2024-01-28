@@ -1,7 +1,7 @@
 ---
 title: "发布学习笔记"
 linkTitle: "发布"
-weight: 196
+weight: 60
 description: >
   记录发布现有学习笔记到nginx的过程，备用
 ---
