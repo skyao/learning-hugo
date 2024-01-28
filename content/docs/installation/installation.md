@@ -94,12 +94,15 @@ $ hugo version
 hugo v0.105.0-0e3b42b4a9bdeb4d866210819fc6ddcf51582ffa+extended linux/amd64 BuildDate=2022-10-28T12:29:05Z VendorInfo=gohugoio
 ```
 
-为了方便使用，增加hugo server 命令的 alias 用来本地编辑时的实时预览： 
+为了方便使用，增加 hugo server 命令的 alias 用来本地编辑时的实时预览： 
 
 ```bash
 vi ~/.zshrc
 # hugo
 alias h='hugo -D -F server --disableFastRender --bind "0.0.0.0"'
+alias h2='hugo -D -F server --disableFastRender --bind "0.0.0.0" --port 2323'
+alias h3='hugo -D -F server --disableFastRender --bind "0.0.0.0" --port 3333'
+alias h4='hugo -D -F server --disableFastRender --bind "0.0.0.0" --port 4343'
 ```
 
 hugo命令行参数说明：
@@ -107,6 +110,8 @@ hugo命令行参数说明：
 - `-D`:  等同`--buildDrafts`，标记为 Draft 的内容也会一起构建，方便在本地编写和预览新的暂时未发布的内容。
 - `-F`:  等同`--buildFuture`，发布时间为"未来"(即时间比当前时间还要晚)内容也会一起构建，方便在本地编写和预览新的暂时未发布的内容。
 - `--disableFastRender`：当内容修改时，进行完整的重新构建，避免预览的内容不够新
+
+h2/h3/h4 指定了不同的端口，当需要在本地打开多个时，可以使用固定端口而不是随机端口。
 
 ## 安装SCSS
 
