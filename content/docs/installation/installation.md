@@ -2,7 +2,7 @@
 title: "安装Hugo"
 linkTitle: "安装Hugo"
 weight: 210
-date: 2021-01-18
+date: 2024-07-18
 description: >
   Hugo在多个操作系统下的安装
 ---
@@ -19,30 +19,23 @@ description: >
 
 在以下网站下载nodejs的安装包：
 
-https://nodejs.org/en/download/ 
+https://nodejs.org/en/download/package-manager
 
 #### Linux下安装nodejs
 
 ```bash
-wget https://nodejs.org/dist/v18.12.0/node-v18.12.0-linux-x64.tar.xz
-tar xvf node-v18.12.0-linux-x64.tar.xz
-sudo mv node-v18.12.0-linux-x64 /usr/share/nodejs
+# installs nvm (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# download and install Node.js (you may need to restart the terminal)
+nvm install 20
+
+# verifies the right Node.js version is in the environment
+node -v # should print `v20.15.1`
+
+# verifies the right npm version is in the environment
+npm -v # should print `10.7.0`
 ```
-
-打开 `~/.zshrc`, 添加下来内容,将 `/usr/share/nodejs/bin` 加入PATH 路径:
-
-```bash
-export PATH=/usr/share/nodejs/bin:$PATH
-```
-
-完成之后执行version命令检验是否安装成功：
-
-```bash
-source ~/.zshrc
-npm --version
-```
-
-注意这里一定要将 `/usr/share/nodejs/bin` 加入到 PATH，不然后面安装其他内容后使用时会报错找不到命令，因为通常新安装的命令都会放在 `/usr/share/nodejs/bin`
 
 ## 安装Hugo
 
@@ -56,15 +49,27 @@ npm --version
 
 找到linux的安装包，对于 ubuntu 可以直接用 deb 文件：
 
-- hugo_extended_0.105.0_linux-amd64.deb
+- hugo_extended_0.121.1_linux-amd64.deb
+
+```bash
+wget https://github.com/gohugoio/hugo/releases/download/v0.121.1/hugo_extended_0.121.1_linux-amd64.deb
+```
 
 deb文件直接安装即可。
 
 ```bash
-sudo dpkg -i hugo_extended_0.105.0_linux-amd64.deb
+sudo dpkg -i hugo_extended_0.121.1_linux-amd64.deb
 ```
 
-### Mac安装
+验证安装版本：
+
+```bash
+$ hugo version
+hugo v0.121.1-00b46fed8e47f7bb0a85d7cfc2d9f1356379b740+extended linux/amd64 BuildDate=2023-12-08T08:47:45Z VendorInfo=gohugoio
+```
+
+
+### Mac安装(有待更新)
 
 mac 下安装最简单的方式是用brew命令，但不合适用来安装extended版本，所以还是需要下载之后手工安装，如下载下列文件：
 
@@ -91,7 +96,7 @@ TODO：暂未尝试，待更新。
 
 ```bash
 $ hugo version
-hugo v0.105.0-0e3b42b4a9bdeb4d866210819fc6ddcf51582ffa+extended linux/amd64 BuildDate=2022-10-28T12:29:05Z VendorInfo=gohugoio
+hugo v0.121.1-00b46fed8e47f7bb0a85d7cfc2d9f1356379b740+extended linux/amd64 BuildDate=2023-12-08T08:47:45Z VendorInfo=gohugoio
 ```
 
 为了方便使用，增加 hugo server 命令的 alias 用来本地编辑时的实时预览： 
@@ -133,7 +138,34 @@ added 115 packages from 112 contributors and audited 115 packages in 12.974s
 added 1 package from 1 contributor, removed 1 package, updated 18 packages and audited 115 packages in 39.211s
 ```
 
-## 自动发布
+如果发生报错，并且查看到如下的错误信息：
+
+```bash
+836 error path /home/sky/work/code/learning/docsy/node_modules/hugo-extended
+837 error command failed
+838 error command sh -c node postinstall.js
+839 error ✖ Hugo installation failed. :(
+839 error node:internal/process/promises:391
+839 error     triggerUncaughtException(err, true /* fromPromise */);
+839 error     ^
+839 error
+839 error RequestError: getaddrinfo ENOTFOUND github.com
+```
+
+这说明是网络出了问题，导致无法访问 github.com ，需要设置网络代码：
+
+
+```bash
+npm config set proxy http://192.168.2.1:7890
+npm config set https-proxy http://192.168.2.1:7890
+```
+
+参考：
+
+- https://stackoverflow.com/questions/21509252/nodejs-module-npm-install-error-gcm-node-module-send-err
+
+
+## 自动发布（归档备忘）
 
 以下是jenkins自动生成并发布到nginx的简单脚本：
 
