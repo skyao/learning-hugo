@@ -104,6 +104,3 @@ description: >
 
 同样也可以通过 icon 来为链接增加图标。
 
-### 搜索
-
-我使用 google custom search engine，具体见 [启用CSE搜索]({{< relref "/docs/theme/docsy/gcse" >}})

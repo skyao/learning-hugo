@@ -29,13 +29,5 @@ description: >
 
 
 
-### 待解决的问题
-
-uglyurls设置为true之后，搜索不可用，页面报错404，原因是uglyurls设置为true之后，提交的页面地址应该是 `/search.html/` 而不应该是 `/search/`。已经提交issue：
-
-- [search 404 after set uglyurls = true](https://github.com/google/docsy/issues/423)
-
-
-
 
 
