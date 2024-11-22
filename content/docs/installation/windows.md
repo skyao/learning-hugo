@@ -15,11 +15,11 @@ description: >
 
 https://go.dev/dl/
 
-下载 windows 安装文件，如 go1.22.5.windows-amd64.msi。
+下载 windows 安装文件，如 go1.23.3.windows-amd64.msi。
 
-安装时选择安装目录为 `C:\Users\sky\work\soft\golang`。
+安装时选择安装目录为 `C:\Users\sky\work\soft\golang` 或者 `D:\sky\work\soft\golang`。
 
-修改环境变量，将 GOPATH 的值修改为 `C:\Users\sky\work\soft\gopath`（默认为 %USERPROFILE%\go）。
+修改环境变量，将 GOPATH 的值修改为 `C:\Users\sky\work\soft\gopath` 或者 `D:\sky\work\soft\gopath`（默认为 %USERPROFILE%\go）。
 
 ### 安装nodejs/npm
 
@@ -29,9 +29,9 @@ https://go.dev/dl/
 
 https://nodejs.org/en/download/package-manager
 
-选择 prebuild installer，下载到 node-v20.16.0-x64.msi 。
+选择 prebuild installer，下载到 node-v22.11.0-x64.msi。
 
-安装时选择安装路径为 `C:\Users\sky\work\soft\nodejs`。
+安装时选择安装路径为 `C:\Users\sky\work\soft\nodejs` 或者 `D:\sky\work\soft\nodejs`。
 
 ## 安装Hugo
 
@@ -43,9 +43,9 @@ https://nodejs.org/en/download/package-manager
 
 https://github.com/gohugoio/hugo/releases/download/v0.121.1/hugo_extended_0.121.1_windows-amd64.zip 
 
-下载下来之后，解压缩，将 hugo.exe 文件复制到目录 `C:\Users\sky\work\soft\hugo` 下。
+下载下来之后，解压缩，将 hugo.exe 文件复制到目录 `C:\Users\sky\work\soft\hugo` 或者 `D:\sky\work\soft\hugo` 下。
 
-然后修改环境变量，在 Path 中增加一项，路径为 `C:\Users\sky\work\soft\hugo`。
+然后修改环境变量，在 Path 中增加一项，路径为 `C:\Users\sky\work\soft\hugo` 或者 `D:\sky\work\soft\hugo` 。
 
 验证安装：
 
