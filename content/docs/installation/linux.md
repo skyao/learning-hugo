@@ -23,23 +23,25 @@ https://nodejs.org/en/download/package-manager
 
 ```bash
 # installs nvm (Node Version Manager)
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
 
 # download and install Node.js (you may need to restart the terminal)
-nvm install 20
+nvm install 22
 
 # verifies the right Node.js version is in the environment
-node -v # should print `v20.15.1`
+node -v # should print `v22.11.0`
 
 # verifies the right npm version is in the environment
-npm -v # should print `10.7.0`
+npm -v # should print `10.9.0`
 ```
 
 ## 安装Hugo
 
 在[Hugo Releases](https://github.com/spf13/hugo/releases)页面下载对应操作系统版本的安装包。
 
-> 注意：由于Google Docsy主题的需求，需要 extended 版本的hugo 以支持 SCSS:
+> 注意：由于Google Docsy主题的需求，需要 extended 版本的hugo 以支持 SCSS.
+
+由于 hugo和主题之间版本有依赖关系，因此我们暂时固定使用 v0.121.1 版本。
 
 找到linux的安装包，对于 ubuntu 可以直接用 deb 文件：
 

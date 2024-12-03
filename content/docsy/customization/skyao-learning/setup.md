@@ -21,14 +21,18 @@ description: >
   `vi ~/.zshrc` 增加一个 h alias，方便后续使用:
 
   ```bash
+  # hugo
   alias h='hugo -D -F server --disableFastRender --bind "0.0.0.0"'
+  alias h2='hugo -D -F server --disableFastRender --bind "0.0.0.0" --port 2323'
+  alias h3='hugo -D -F server --disableFastRender --bind "0.0.0.0" --port 3333'
+  alias h4='hugo -D -F server --disableFastRender --bind "0.0.0.0" --port 4343'
   ```
 
 - git
 
 - markdown编辑器：如 typora
 
-准备好目录，
+准备好目录:
 
 ```bash
 mkdir -p ~/work/code/learning
