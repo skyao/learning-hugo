@@ -57,6 +57,10 @@ deb文件直接安装即可。
 sudo dpkg -i hugo_extended_0.121.1_linux-amd64.deb
 ```
 
+为了避免 apt 自动升级 hugo 版本造成不可用，可以锁定版本：
 
+```bash
+sudo apt-mark hold hugo
+```
 
 
