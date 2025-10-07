@@ -69,10 +69,10 @@ time_format_blog = "2006.01.02"
 enableGitInfo = false
 
 [params]
-copyright = "skyao.io"
+copyright = "skyao.net"
 privacy_policy = ""
 
-url_latest_version = "https://skyao.io/learning-xxx"
+url_latest_version = "https://skyao.net/learning-xxx"
 github_repo = "https://github.com/skyao/learning-xxx"
 github_project_repo = "https://github.com/skyao/learning-xxx"
 

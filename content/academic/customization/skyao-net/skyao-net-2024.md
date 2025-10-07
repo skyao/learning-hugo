@@ -53,7 +53,7 @@ defaultContentLanguageInSubdir: false
 
 ```yaml
 title: 敖小剑的博客 # Website name
-baseURL: 'https://skyao.io/' # Website URL
+baseURL: 'https://skyao.net/' # Website URL
 
 # 分页数量从10修改为20
 paginate: 20
@@ -141,7 +141,7 @@ marketing:
 
 footer:
   copyright:
-    notice: '© {year} skyao.io All Rights Reserved'
+    notice: '© {year} skyao.net All Rights Reserved'
     license:
       enable: false
       share_alike: false # 这个暂时还不知道是显示什么内容
@@ -158,7 +158,7 @@ locale:
 
 features:
   repository:
-    url: 'https://github.com/skyao/skyao.io'
+    url: 'https://github.com/skyao/skyao.net'
     content_dir: content
     branch: master
 ```
@@ -735,8 +735,8 @@ cascade:
 
 ## 更新网站
 
-skyao.io 网站之前建立时是使用了其他的仓库，内容是调整之后再复制过去的，代码无法和 theme-academic-cv 仓库合并。
+skyao.net 网站之前建立时是使用了其他的仓库，内容是调整之后再复制过去的，代码无法和 theme-academic-cv 仓库合并。
 
-因此，在 theme-academic-cv 仓库代码修改完成之后，就需要将修改好的内容，复制到 skyao.io 网站的仓库，然后提交。
+因此，在 theme-academic-cv 仓库代码修改完成之后，就需要将修改好的内容，复制到 skyao.net 网站的仓库，然后提交。
 
 由于这个更新操作我一般2到3年才做一次，因此也还好。

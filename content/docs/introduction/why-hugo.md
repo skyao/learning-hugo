@@ -52,11 +52,11 @@ Hugo以速度快著称，号称是世界上最快的网站生成框架。
 
 我的个人技术博客网站，十几年来经历过很多变更，从csdn，blogjava，javaeye，hexo+github page，gitbook一路走来，在2018年2月，开始转换到hugo，迄今整三年。
 
-这些年博客的历程，有兴趣了解的同学可以看看我在2018年改用hugo时写的文章：[十年一觉扬州梦，赢得青楼薄幸名](https://skyao.io/post/201802-getting-started/)
+这些年博客的历程，有兴趣了解的同学可以看看我在2018年改用hugo时写的文章：[十年一觉扬州梦，赢得青楼薄幸名](https://skyao.net/post/201802-getting-started/)
 
 ![](images/hugo-logo-black.png)
 
-目前的博客网站使用了自行修改订制之后的 academic 主题，非常满意，点击 [这里](https://skyao.io) 可以看到实际效果。
+目前的博客网站使用了自行修改订制之后的 academic 主题，非常满意，点击 [这里](https://skyao.net) 可以看到实际效果。
 
 ### 学习笔记
 

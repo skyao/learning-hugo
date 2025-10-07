@@ -37,15 +37,15 @@ description : "介绍Hugo学习笔记的基本资料和访问方式。"
 
 ### 提交给Google网站站长
 
-打开 [Google网站站长](https://www.google.com/webmasters/)，点击 "[SEARCH CONSOLE ](https://search.google.com/search-console?hl=zh-CN)" 进入，然后添加资源，如`https://skyao.io/learning-hugo/`。会要求下载一个html文件如`google571325××××.html`做验证，将这个文件保存到hugo站点根目录下的static子目录，更新站点内容让google search console可以访问到进行验证即可。
+打开 [Google网站站长](https://www.google.com/webmasters/)，点击 "[SEARCH CONSOLE ](https://search.google.com/search-console?hl=zh-CN)" 进入，然后添加资源，如`https://skyao.net/learning-hugo/`。会要求下载一个html文件如`google571325××××.html`做验证，将这个文件保存到hugo站点根目录下的static子目录，更新站点内容让google search console可以访问到进行验证即可。
 
-进入资源页面，点"索引"下的"站点地图"，在"添加新的站点地图"处输入当前hugo站点的sitemap，这个文件hugo会默认生成，就在根路径下，如`https://skyao.io/learning-hugo/sitemap.xml`。
+进入资源页面，点"索引"下的"站点地图"，在"添加新的站点地图"处输入当前hugo站点的sitemap，这个文件hugo会默认生成，就在根路径下，如`https://skyao.net/learning-hugo/sitemap.xml`。
 
 ## 百度搜索优化
 
 打开 [百度搜索资源平台](https://ziyuan.baidu.com/) ，点击 [链接提交](https://ziyuan.baidu.com/linksubmit/index)，然后点"添加站点"。同样可以用文件验证的方式来进行网站验证。
 
-进入"数据引入"下的"链接提交"，再点 "自动提交" 下的 "sitemap"，在这里可以提交hugo网站的sitemap文件。注意百度不容许以子目录的方式提交子站点，和google不一样，我们的学习笔记 `https://skyao.io/learning-hugo/` 就不能直接提交了，只能在提交sitemap文件时，提交多个sitemap文件。这样也能勉强让百度收录。
+进入"数据引入"下的"链接提交"，再点 "自动提交" 下的 "sitemap"，在这里可以提交hugo网站的sitemap文件。注意百度不容许以子目录的方式提交子站点，和google不一样，我们的学习笔记 `https://skyao.net/learning-hugo/` 就不能直接提交了，只能在提交sitemap文件时，提交多个sitemap文件。这样也能勉强让百度收录。
 
 ### Bing搜索优化
 

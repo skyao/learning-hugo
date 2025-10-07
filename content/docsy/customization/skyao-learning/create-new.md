@@ -42,7 +42,7 @@ https://cse.google.com/cse/all
 创建一个新的搜索引擎：
 
 - 名称： learning-debian
-- 搜索内容： `skyao.io/learning-debian/*`
+- 搜索内容： `skyao.net/learning-debian/*`
 
 
 创建成功后的页面就会显示 

@@ -8,7 +8,7 @@ description: >
 
 ## 背景
 
-我的学习笔记发布在 `https://skyao.io/learning-xxx` 这样的地址下，其中 https://skyao.io 这个网站是我的个人博客网站，也是 基于 hugo，使用 nginx 发布。
+我的学习笔记发布在 `https://skyao.net/learning-xxx` 这样的地址下，其中 https://skyao.net 这个网站是我的个人博客网站，也是 基于 hugo，使用 nginx 发布。
 
 ## 准备工作
 

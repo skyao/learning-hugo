@@ -49,13 +49,13 @@ cd hugo-blox-builder
 git checkout skyao-io-2024
 ```
 
-skyao.io 仓库
+skyao.net 仓库
 
 ```bash
-# skyao.io.git
+# skyao.net.git
 cd ~/work/code/skyao
-git clone git@github.com:skyao/skyao.io.git
-cd skyao.io
+git clone git@github.com:skyao/skyao.net.git
+cd skyao.net
 ```
 
 ## 启动 hugo server
@@ -69,8 +69,8 @@ h
 输出为：
 
 ```bash
-Watching for changes in /home/sky/work/code/skyao/{hugo-blox-builder,skyao.io}
-Watching for config changes in /home/sky/work/code/skyao/skyao.io/config/_default, /home/sky/work/code/skyao/hugo-blox-builder/modules/blox-plugin-netlify/config.yaml, /home/sky/work/code/skyao/hugo-blox-builder/modules/blox-plugin-reveal/config.yaml, /home/sky/work/code/skyao/hugo-blox-builder/modules/blox-bootstrap/hugo.yaml, /home/sky/work/code/skyao/skyao.io/go.mod
+Watching for changes in /home/sky/work/code/skyao/{hugo-blox-builder,skyao.net}
+Watching for config changes in /home/sky/work/code/skyao/skyao.net/config/_default, /home/sky/work/code/skyao/hugo-blox-builder/modules/blox-plugin-netlify/config.yaml, /home/sky/work/code/skyao/hugo-blox-builder/modules/blox-plugin-reveal/config.yaml, /home/sky/work/code/skyao/hugo-blox-builder/modules/blox-bootstrap/hugo.yaml, /home/sky/work/code/skyao/skyao.net/go.mod
 Start building sites … 
 hugo v0.121.1-00b46fed8e47f7bb0a85d7cfc2d9f1356379b740+extended linux/amd64 BuildDate=2023-12-08T08:47:45Z VendorInfo=gohugoio
 

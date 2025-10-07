@@ -24,33 +24,33 @@ sudo apt-get install letsencrypt
 生成证书：
 
 ```bash
-sudo letsencrypt certonly --webroot -w /var/www/skyao -d skyao.io
+sudo letsencrypt certonly --webroot -w /var/www/skyao -d skyao.net
 ```
 
 ## 配置nginx
 
-在`/etc/nginx/sites-available`下增加一个`skyao.io.https`站点文件，内容如下：
+在`/etc/nginx/sites-available`下增加一个`skyao.net.https`站点文件，内容如下：
 
 ```json
 server {
     listen 443 ssl;
-    server_name skyao.io www.skyao.io;
+    server_name skyao.net www.skyao.net;
 
     root /var/www/skyao;
     index index.html;
 
     ssl on;
-    ssl_certificate /etc/letsencrypt/live/skyao.io/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/skyao.io/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/skyao.net/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/skyao.net/privkey.pem;
 }
 ```
 
-然后将http请求都自动转为https，修改原来的`skyao.io`配置文件：
+然后将http请求都自动转为https，修改原来的`skyao.net`配置文件：
 
 ```json
 server {
     listen 80;
-    server_name skyao.io www.skyao.io;
+    server_name skyao.net www.skyao.net;
     rewrite ^(.*)$  https://$host$1 permanent;
 }
 ```

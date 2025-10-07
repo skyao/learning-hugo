@@ -69,7 +69,7 @@ CONFLICT (content): Merge conflict in package.json
   title = "hugo学习笔记"
   description = "hugo学习笔记，记录学习hugo的过程和相关资料"
   
-  url_latest_version = "https://skyao.io/learning-hugo"
+  url_latest_version = "https://skyao.net/learning-hugo"
   github_repo = "https://github.com/skyao/learning-hugo"
   github_project_repo = "https://github.com/skyao/learning-hugo"
   ```
@@ -82,7 +82,7 @@ CONFLICT (content): Merge conflict in package.json
 
   这个参数按说每个学习笔记都应该设置自己独有的 id。
 
-  如果没有的话就用默认值  "d3c56aefaae284df1"，这是 `https://skyao.io` 整个网站的 gcs_engine_id。
+  如果没有的话就用默认值  "d3c56aefaae284df1"，这是 `https://skyao.net` 整个网站的 gcs_engine_id。
 
 - 修改 googleAnalytics id
 
