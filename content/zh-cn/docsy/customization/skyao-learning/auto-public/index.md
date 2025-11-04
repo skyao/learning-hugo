@@ -262,3 +262,12 @@ crontab -e
 */10 * * * * /bin/bash /home/sky/work/code/learning/auto_publish_parallel.sh >/dev/null 2>&1
 ```
 
+注意: 用 sky 帐号执行 `crontab -e`,不要用 root 帐号或者 sudo 执行 `crontab -e`, 那样编辑的是 root 帐号的 cron,执行命令是用的是 root 用户来执行自动发布版本. 而我的 git 仓库一般都是用 sky 帐号 clone 的. 在新版本的 git 中会报错:
+
+```bash
+fatal: detected dubious ownership in repository at '/home/sky/work/code/learning/learning-windows-server' 
+To add an exception for this directory, call: 
+
+    git config --global --add safe.directory /home/sky/work/code/learning/learning-windows-server
+```
+
