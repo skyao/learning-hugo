@@ -271,3 +271,56 @@ To add an exception for this directory, call:
     git config --global --add safe.directory /home/sky/work/code/learning/learning-windows-server
 ```
 
+### 全部发布
+
+有时自动发布脚本因故没能成功执行，而因为 git pull 已经执行，git 的更新已经拉到本地，导致不会激活内容的发布。
+
+因此，新增一个全部发布的脚本，手动执行，强制发布所有内容。作为必要时的补充。
+
+```bash
+cd /home/sky/work/code/learning
+vi all_publish.sh
+```
+
+内容为:
+
+```bash
+#!/bin/bash
+# 自动拉取并发布 learning-* 子目录（带错误处理）
+# 运行环境: Debian 12/13
+
+BASE_DIR="/home/sky/work/code/learning"
+PUBLISH_SCRIPT="$BASE_DIR/publish.sh"
+
+# 遍历所有以 learning- 开头的子目录
+for repo in "$BASE_DIR"/learning-*; do
+    if [ -d "$repo/.git" ]; then
+        cd "$repo" || continue
+        echo ">>> 仓库: $(basename "$repo")"
+
+        echo "    执行 git pull..."
+        if git pull --ff-only; then
+            echo "    git pull 成功，调用发布脚本..."
+            if "$PUBLISH_SCRIPT" "$(basename "$repo")"; then
+                echo "    发布成功"
+            else
+                echo "    发布脚本执行失败，跳过"
+            fi
+        else
+            echo "    git pull 失败，跳过发布"
+        fi
+    fi
+done
+```
+
+增加执行属性:
+
+```bash
+chmod +x all_publish.sh
+```
+
+手工执行:
+
+```bash
+./all_publish.sh
+```
