@@ -1,0 +1,4 @@
+interface:
+  display_name: "初始化学习笔记"
+  short_description: "按 skyao Docsy 模板初始化学习笔记，配置站点并验证本地构建"
+  default_prompt: "使用 $init-learning-note-skill，按 skyao 的 Docsy 指南初始化当前主题的学习笔记。"
